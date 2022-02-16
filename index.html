@@ -1,43 +1,48 @@
 <html>
     <style>
-        .enterUsername{
-            margin-top: 350px;
-            margin-left: 650px;
+        body{
+            background-color: black;
         }
-        .enterPassword{
-            margin-left: 650px;
-        }
-        #submitButton{
-            margin-left: 710px;
+        div{
+            position: absolute;
+            height: 10em;
+            margin: 0;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);
         }
         #wrongPsswdText{
-            margin-left: 660px;
             display: none;
+            color: red;
+        }
+        #submitButton{
+            margin-left: 35%;
         }
     </style>
-    <script>
-    var username = document.querySelector(".enterUsername");
-    var password = document.querySelector(".enterPassword");
-
-    function tryAgainText(){
-        var text = document.getElementById("wrongPsswdText");
-        text.style.display = "block";
-    }
-    function Login(){
-      if(username == "admin" && password == "1234"){
-          window.location.replace("mainpage.html");
-     }
-     else{
-           tryAgainText();
-        }
-    }
-    </script>
     <body>
         <div>
-             <input class="enterUsername" type="text" placeholder="Username" name="username" required><br><br>
-             <input class="enterPassword" type="text" placeholder="Password" name="password" required><br><br>
+             <input class="enterUsername" type="text" placeholder="Username" name="username" id="inputUser" required><br><br>
+             <input class="enterPassword" type="text" placeholder="Password" name="password" id="inputPsswd" required><br><br>
              <p id="wrongPsswdText">Wrong password, try again.</p>
              <input id="submitButton" onclick="Login()" type="submit" value="Login" >
         </div>
+    <script>
+        
+        function tryAgainText(){
+            var text = document.getElementById("wrongPsswdText");
+            text.style.display = "block";
+        }
+        function Login(){
+            var username = document.getElementById("inputUser").value;
+            var password = document.getElementById("inputPsswd").value;
+            if(username == "admin" && password == "1234"){
+                window.location.replace("mainpage.html");
+            }
+            else{
+                tryAgainText();
+            }
+     }
+    </script>
     </body>
 </html>
