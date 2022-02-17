@@ -28,7 +28,10 @@
              <input id="submitButton" onclick="Login()" type="submit" value="Login" >
         </div>
     <script>
-        
+        let cookies = document.cookie;
+        if (cookies == true){
+            window.location.replace("mainpage.html");
+        }
         function tryAgainText(){
             var text = document.getElementById("wrongPsswdText");
             text.style.display = "block";
@@ -37,6 +40,7 @@
             var username = document.getElementById("inputUser").value;
             var password = document.getElementById("inputPsswd").value;
             if(username == "admin" && password == "1234"){
+                document.cookie = "isLogged = true;"
                 window.location.replace("mainpage.html");
             }
             else{
