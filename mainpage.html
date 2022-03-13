@@ -3,14 +3,16 @@
  
  <style>
   main {
-   <!-- font-family: 'Zen Kurenaido', sans-serif; -->
+   font-family: 'Zen Kurenaido', sans-serif;
    font-size: 20px;
    color: green;
    font-family: Consolas;
   }
+
   .logo-img{
   padding-right: 13px;
   }
+
   .right-bottom-text {
    width: -40%;
    text-align: right;
@@ -20,30 +22,69 @@
    right: 0;
    position: fixed;
    padding-right: 10px;
-   background-color: black;
   }
+
   #year {
    padding-right: 80px;
    padding-top: 0px;
    margin-top: -29px;
   }
-  #buttonredirect{
-    outline: 1px solid white;
-    padding-right: 85px;
-    padding-bottom: 25px;
-    font-size: 20px
-  }
+
   body {
    background-color: black;
   }
+
+  #haxxed{
+    background: linear-gradient(40deg, #140a97, #c9290d);
+    height: 30%;
+    border-radius: 30px;
+    margin: 50px auto;
+    width: 40%;
+  }
+
+  #text1{
+    position: relative;
+    text-align: center;
+    padding-top: 14%;
+    color: rgb(0, 255, 0);
+    font-size: 60px;
+  }
+
+  #tzeapacumetre{
+    display: none;
+    width: 1000px;
+    height: 900px;
+    position: relative;
+    bottom: 500px;
+    left: 450px;
+  }
+
  </style>
+
  <body>
+   
+   <div id="haxxed" onclick="SadViolin()">
+    <p id="text1">HAXXED</p>
+  </div>
+  <video src="smallviolin.mp4" id="tzeapacumetre" ></video>
  <div class="right-bottom-text">
+
   <img src="output-onlinepngtools - Copy.png" width="180" height="120" class="logo-img">
   <p>Comunitatea Jmekkerilor</p>
   <br>
   <p id="year">2022</p>
  </div>
+<script>
+  function SadViolin(){
+    document.getElementById("tzeapacumetre").style.display="initial";
+    document.getElementById("tzeapacumetre").play(); 
+    window.setTimeout(Hide, 12000);
+  }
+  function Hide(){
+    document.getElementById("tzeapacumetre").style.display="none";
+  }
+</script>
  </body>
   </main>
+
 </html>
