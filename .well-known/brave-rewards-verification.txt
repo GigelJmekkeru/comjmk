@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: comjmk.tk
+Token: 43b0b0c6676d567a16ea0b0434d7f4bdfbc30fb55a35cb6a5f3c61ef13e061a0
